@@ -51,7 +51,7 @@ const commands = {
   },
   signal: {
     target: "#signal",
-    message: "send.signal ready: choose email or github.",
+    message: "send.signal ready: ferdinandtj4@gmail.com, LinkedIn, or GitHub.",
   },
   chaos: {
     action: () => toggleChaos("chaos mode toggled from terminal."),
@@ -211,11 +211,11 @@ form.addEventListener("submit", (event) => {
 panicButton.addEventListener("dblclick", () => toggleChaos());
 
 copySignal.addEventListener("click", async () => {
-  const signal = "Repository Access: https://github.com/FerdinandTJ/ | LinkedIn: https://www.linkedin.com/in/ferdinandtj";
+  const signal = "Email: ferdinandtj4@gmail.com | GitHub: https://github.com/FerdinandTJ/ | LinkedIn: https://www.linkedin.com/in/ferdinandtj";
 
   try {
     await navigator.clipboard.writeText(signal);
-    showToast("Signal copied: github.com/FerdinandTJ");
+    showToast("Signal copied: email, GitHub, and LinkedIn.");
   } catch {
     showToast(signal);
   }
