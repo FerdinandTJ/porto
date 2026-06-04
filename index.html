@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive anti-mainstream portfolio for Timotheus Ferdinand Tjondrojo."
+    />
+    <title>Timotheus Ferdinand Tjondrojo | Repository Access</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="signal-field" aria-hidden="true"></canvas>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <main class="viewport-shell">
+      <section class="boot-panel" aria-labelledby="boot-title">
+        <p class="kicker">/user/ferdinandtj/*</p>
+        <h1 id="boot-title">Timotheus Ferdinand Tjondrojo builds strange, useful systems.</h1>
+        <p class="lead">
+          Bachelor student at Universitas Pertamina, shipping experiments across Java,
+          Python, TypeScript, PHP, Swift, web programming, dashboards, mobile ideas,
+          and the kind of interfaces that refuse to sit politely inside equal-width cards.
+        </p>
+        <div class="hero-actions" aria-label="Primary links">
+          <a href="https://dashboardtws.cloud" target="_blank" rel="noreferrer">live deploy</a>
+          <a href="https://github.com/FerdinandTJ/MagangTelkom-Dashboard" target="_blank" rel="noreferrer">source receipt</a>
+          <a href="cv.pdf" target="_blank" rel="noreferrer">open cv</a>
+          <button type="button" data-command="internship">experience log</button>
+        </div>
+
+        <aside class="hero-dossier" aria-label="Current profile dossier">
+          <span class="artifact-label">current.signal</span>
+          <dl>
+            <div>
+              <dt>Now</dt>
+              <dd>OOP practicum assistant, second appointment</dd>
+            </div>
+            <div>
+              <dt>Recent</dt>
+              <dd>Software Engineer Intern at Telkom Indonesia</dd>
+            </div>
+            <div>
+              <dt>Proof</dt>
+              <dd>dashboardtws.cloud + GitHub source artifacts + cv.pdf</dd>
+            </div>
+          </dl>
+        </aside>
+
+        <div class="terminal" role="region" aria-label="Interactive terminal">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>ferdinand://signal</strong>
+          </div>
+          <div class="terminal-log" id="terminal-log" aria-live="polite">
+            <p><span>system</span> booting asymmetric interface...</p>
+            <p><span>hint</span> try: scan, lore, internship, experiments, source, cv, chaos</p>
+          </div>
+          <form class="terminal-form" id="terminal-form">
+            <label for="command-input">command</label>
+            <span aria-hidden="true">$</span>
+            <input
+              id="command-input"
+              name="command"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="type a command"
+            />
+            <button type="submit">run</button>
+          </form>
+        </div>
+      </section>
+
+      <nav class="quick-commands" aria-label="Quick commands">
+        <button data-command="lore">Origin Story</button>
+        <button data-command="internship">Internship Log</button>
+        <button data-command="experiments">Case Files</button>
+        <button data-command="source">Repository Access</button>
+        <button data-command="scan">Run Scan</button>
+        <button data-command="signal">Send a Signal</button>
+      </nav>
+
+      <section class="desktop" aria-label="Portfolio desktop">
+        <article class="artifact artifact-lore" id="lore" data-tilt>
+          <span class="artifact-label">origin.story</span>
+          <h2>Lore, But Make It Runnable</h2>
+          <p>
+            Timotheus builds from the useful mess of a student-developer lab: object
+            oriented Java exercises, Laravel and PHP sketches, TypeScript dashboards,
+            Python data work, mobile finance tooling, and hardware-flavored IoT experiments.
+          </p>
+          <dl class="stats">
+            <div>
+              <dt>Base</dt>
+              <dd>Jakarta, Indonesia</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Java, Python, C/C++, PHP, TypeScript, Swift</dd>
+            </div>
+            <div>
+              <dt>Signal</dt>
+              <dd>web application development, dashboards, data and IoT experiments</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="artifact artifact-source" id="source" data-tilt>
+          <span class="artifact-label">repository.access</span>
+          <h2>The Source Code Is Not a Footer Icon</h2>
+          <p>
+            GitHub is the blueprint drawer: 30 public repositories, from UPartnerApp
+            to MagangTelkom-Dashboard, FinanceTrackerApp, SmartTrashBin, and portfolio
+            iterations. LinkedIn and CV sit beside it as the external dossier.
+          </p>
+          <div class="source-links">
+            <a class="source-link" href="https://github.com/FerdinandTJ/" target="_blank" rel="noreferrer">
+              <span>open github mainframe</span>
+              <strong>github.com/FerdinandTJ</strong>
+            </a>
+            <a class="source-link secondary" href="https://www.linkedin.com/in/ferdinandtj" target="_blank" rel="noreferrer">
+              <span>open linkedin dossier</span>
+              <strong>linkedin.com/in/ferdinandtj</strong>
+            </a>
+            <a class="source-link cv-link" href="cv.pdf" target="_blank" rel="noreferrer">
+              <span>open cv dossier</span>
+              <strong>cv.pdf</strong>
+            </a>
+          </div>
+        </article>
+
+        <article class="internship-log" id="internship" data-tilt>
+          <span class="artifact-label">experience.logs</span>
+          <h2>Internship Receipts & Practicum Lore</h2>
+          <p>
+            Work history that has context: one Telkom Indonesia internship with a
+            deployed dashboard, plus recurring practicum assistant roles at Universitas
+            Pertamina across Web Programming, Object Oriented Programming, and Operating
+            Systems.
+          </p>
+          <div class="internship-receipts">
+            <a href="https://github.com/FerdinandTJ/MagangTelkom-Dashboard" target="_blank" rel="noreferrer">
+              <span>software engineer intern / Sep 2025 - Jan 2026</span>
+              <strong>Telkom Indonesia Internship</strong>
+              <small>Software development and data-analysis workstream; source artifact lives in MagangTelkom-Dashboard.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>Software Dev</em>
+                <em>Data Analysis</em>
+                <em>TypeScript</em>
+              </div>
+            </a>
+            <a href="https://dashboardtws.cloud" target="_blank" rel="noreferrer">
+              <span>live artifact / vps deploy</span>
+              <strong>dashboardtws.cloud</strong>
+              <small>Deployed dashboard result, hosted on a VPS as the live internship artifact.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>Dashboard</em>
+                <em>Deployment</em>
+                <em>VPS</em>
+              </div>
+            </a>
+            <div class="experience-note">
+              <span>practicum assistant / Sep 2025 - Jan 2026</span>
+              <strong>Web Programming</strong>
+              <small>Supported learning materials, technical guidance, and practical-skill evaluation for web programming labs.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>PHP</em>
+                <em>MySQL</em>
+                <em>Web</em>
+              </div>
+            </div>
+            <div class="experience-note">
+              <span>practicum assistant / Feb 2025 - Jun 2025</span>
+              <strong>Object Oriented Programming</strong>
+              <small>Guided students through practical OOP principles, software design, and development exercises.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>OOP</em>
+                <em>Data Structures</em>
+                <em>Java</em>
+              </div>
+            </div>
+            <div class="experience-note">
+              <span>current practicum assistant / second appointment</span>
+              <strong>Object Oriented Programming</strong>
+              <small>Returning as OOP practicum assistant for a second cycle, continuing student mentoring and lab guidance.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>Mentoring</em>
+                <em>OOP</em>
+                <em>Lab Guidance</em>
+              </div>
+            </div>
+            <div class="experience-note">
+              <span>practicum assistant / Mar 2024 - Jul 2024</span>
+              <strong>Operating Systems</strong>
+              <small>Guided students through hands-on operating-system concepts, including core mechanisms and C-based practice.</small>
+              <div class="mini-tags" aria-label="Skills">
+                <em>C</em>
+                <em>OS</em>
+                <em>Process</em>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study" id="telkom-case" data-tilt>
+          <span class="artifact-label">case.study/telkom</span>
+          <h2>Telkom Dashboard, Field Notes</h2>
+          <div class="case-study-grid">
+            <div>
+              <span>Problem</span>
+              <p>Operational dashboard work needed a clearer interface for reading and monitoring data signals during the internship.</p>
+            </div>
+            <div>
+              <span>What I Built</span>
+              <p>A TypeScript dashboard artifact, with the source tracked in GitHub and a live result deployed to a VPS.</p>
+            </div>
+            <div>
+              <span>Stack</span>
+              <p>TypeScript, dashboard UI, deployment workflow, VPS-hosted delivery, and data-analysis context.</p>
+            </div>
+            <div>
+              <span>Result</span>
+              <p>The work has two receipts: source code in MagangTelkom-Dashboard and the deployed build at dashboardtws.cloud.</p>
+            </div>
+          </div>
+          <div class="case-study-actions">
+            <a href="https://dashboardtws.cloud" target="_blank" rel="noreferrer">open live</a>
+            <a href="https://github.com/FerdinandTJ/MagangTelkom-Dashboard" target="_blank" rel="noreferrer">open source</a>
+          </div>
+        </article>
+
+        <section class="case-files" id="experiments" aria-labelledby="case-title">
+          <p class="artifact-label">case.files</p>
+          <h2 id="case-title">What I Built in the Dark</h2>
+          <div class="case-strip">
+            <a class="case-card" href="https://github.com/FerdinandTJ/MagangTelkom-Dashboard" target="_blank" rel="noreferrer">
+              <span>01</span>
+              <h3>MagangTelkom Dashboard</h3>
+              <p>TypeScript dashboard artifact from internship operational work.</p>
+              <div class="tech-tags" aria-label="Tech stack">
+                <em>TypeScript</em>
+                <em>Dashboard</em>
+                <em>VPS</em>
+              </div>
+            </a>
+            <a class="case-card" href="https://github.com/FerdinandTJ/FinanceTrackerApp" target="_blank" rel="noreferrer">
+              <span>02</span>
+              <h3>Finance Tracker App</h3>
+              <p>Swift mobile project for personal finance tracking and app-structure practice.</p>
+              <div class="tech-tags" aria-label="Tech stack">
+                <em>Swift</em>
+                <em>Mobile</em>
+                <em>Finance</em>
+              </div>
+            </a>
+            <a class="case-card" href="https://github.com/FerdinandTJ/Website-Pembayaran-IPL-Iuran-Pemeliharaan-Lingkungan-" target="_blank" rel="noreferrer">
+              <span>03</span>
+              <h3>IPL Payment Website</h3>
+              <p>Blade/Laravel-style web system for neighborhood maintenance payment flows.</p>
+              <div class="tech-tags" aria-label="Tech stack">
+                <em>Blade</em>
+                <em>Laravel</em>
+                <em>Payment Flow</em>
+              </div>
+            </a>
+            <a class="case-card" href="https://github.com/FerdinandTJ/IoTProject_SmartTrashBin" target="_blank" rel="noreferrer">
+              <span>04</span>
+              <h3>Smart Trash Bin</h3>
+              <p>Python IoT experiment: software logic meeting hardware problem solving.</p>
+              <div class="tech-tags" aria-label="Tech stack">
+                <em>Python</em>
+                <em>IoT</em>
+                <em>Hardware</em>
+              </div>
+            </a>
+            <a class="case-card" href="https://github.com/FerdinandTJ/UPartnerApp" target="_blank" rel="noreferrer">
+              <span>05</span>
+              <h3>UPartner App</h3>
+              <p>Java application archive and one of the pinned public blueprints.</p>
+              <div class="tech-tags" aria-label="Tech stack">
+                <em>Java</em>
+                <em>App Logic</em>
+                <em>OOP</em>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <aside class="signal-card" id="signal" data-tilt>
+          <span class="artifact-label">send.signal</span>
+          <h2>Ping Me</h2>
+          <p>
+            Have a strange brief, a hard interface problem, or a repository worth opening?
+          </p>
+          <div class="signal-actions">
+            <button type="button" id="copy-signal">copy signal</button>
+            <a href="https://github.com/FerdinandTJ/" target="_blank" rel="noreferrer">github</a>
+            <a href="https://www.linkedin.com/in/ferdinandtj" target="_blank" rel="noreferrer">linkedin</a>
+          </div>
+        </aside>
+
+        <button class="panic-button" id="panic-button" aria-label="Toggle chaos mode">
+          do not double click
+        </button>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
