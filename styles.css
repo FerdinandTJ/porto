@@ -670,6 +670,10 @@ h1 {
   filter: saturate(1.22) contrast(1.06);
 }
 
+.case-card-feature {
+  cursor: default;
+}
+
 .case-card span {
   color: var(--brass);
   font-size: 3rem;
@@ -712,6 +716,36 @@ h1 {
 .tech-tags em:nth-child(3) {
   color: var(--ink);
   background: var(--violet);
+}
+
+.case-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.case-card-actions a {
+  color: var(--paper);
+  background: var(--mint);
+  border: 1px solid rgba(241, 234, 215, 0.34);
+  padding: 10px 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.case-card-actions a:nth-child(2) {
+  color: var(--ink);
+  background: var(--violet);
+}
+
+.case-card-actions a:hover {
+  box-shadow: 5px 5px 0 rgba(255, 107, 53, 0.32);
+  transform: translate(-2px, -2px);
 }
 
 .signal-card {
