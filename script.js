@@ -21,7 +21,7 @@ const commands = {
   },
   experiments: {
     target: "#experiments",
-    message: "case.files unlocked: six evidence packets found, including EduSync.",
+    message: "case.files unlocked: seven evidence packets found, including EduSync and Peduli Yuk.",
   },
   internship: {
     target: "#internship",
@@ -31,7 +31,7 @@ const commands = {
     action: () => {
       appendLog("scan", "identity: Universitas Pertamina student / software builder.");
       appendLog("scan", "experience: Telkom Indonesia intern, Web Programming PA, OOP PA x2, Operating Systems PA.");
-      appendLog("scan", "proof: edusync-uper.vercel.app, dashboardtws.cloud, GitHub source artifacts, cv.pdf.");
+      appendLog("scan", "proof: edusync-uper.vercel.app, dashboardtws.cloud, Peduli Yuk collab repo, GitHub source artifacts, cv.pdf.");
       appendLog("scan", "stack: Java, Python, C/C++, PHP, React, TypeScript, Swift, MySQL, Supabase, Laravel/Blade.");
       document.querySelector("#telkom-case").scrollIntoView({ behavior: "smooth", block: "center" });
     },
