@@ -352,16 +352,22 @@ h1 {
   background: var(--mint);
 }
 
+.quick-commands button:nth-child(7) {
+  background: var(--brass);
+}
+
 .desktop {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.8fr);
   grid-template-areas:
     "lore source"
+    "skills skills"
     "intern intern"
     "study study"
     "cases cases"
-    "signal panic";
+    "signal hire"
+    "panic panic";
   gap: clamp(22px, 4vw, 54px);
   align-items: start;
   padding: 22px 0 90px;
@@ -371,7 +377,9 @@ h1 {
 .case-files,
 .case-study,
 .internship-log,
-.signal-card {
+.hire-card,
+.signal-card,
+.skills-matrix {
   position: relative;
   border: 1px solid var(--line);
   background: var(--panel-soft);
@@ -428,8 +436,10 @@ h1 {
 .artifact h2,
 .case-files h2,
 .case-study h2,
+.hire-card h2,
 .internship-log h2,
-.signal-card h2 {
+.signal-card h2,
+.skills-matrix h2 {
   margin-top: 8px;
   font-family: "Instrument Serif", Georgia, serif;
   font-size: clamp(2.25rem, 6vw, 5rem);
@@ -439,11 +449,56 @@ h1 {
 
 .artifact p,
 .case-study p,
+.hire-card p,
 .internship-log p,
-.signal-card p {
+.signal-card p,
+.skills-matrix p {
   margin-top: 18px;
   color: var(--muted);
   line-height: 1.62;
+}
+
+.skills-matrix {
+  grid-area: skills;
+  padding: 30px;
+  --base-transform: rotate(0.4deg);
+  transform: var(--base-transform);
+  background:
+    linear-gradient(120deg, rgba(139, 214, 199, 0.1), transparent 45%),
+    linear-gradient(200deg, rgba(142, 125, 255, 0.1), transparent 50%),
+    rgba(18, 19, 24, 0.84);
+}
+
+.edu-line {
+  color: var(--ink);
+}
+
+.edu-line strong {
+  color: var(--brass);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.skills-grid > div {
+  min-height: 120px;
+  border: 1px solid var(--line);
+  background: rgba(9, 10, 13, 0.54);
+  padding: 16px;
+}
+
+.skills-grid span {
+  color: var(--mint);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.skills-grid .tech-tags {
+  margin-top: 12px;
 }
 
 .case-study-grid {
@@ -492,7 +547,7 @@ h1 {
 
 .internship-receipts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 24px;
 }
@@ -593,6 +648,20 @@ h1 {
   display: grid;
   gap: 12px;
   margin-top: 24px;
+}
+
+.ip-badge {
+  margin-top: 18px;
+  border: 1px dashed var(--brass);
+  background: rgba(215, 179, 90, 0.1);
+  padding: 12px 14px;
+  color: var(--ink);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.ip-badge strong {
+  color: var(--brass);
 }
 
 .source-link {
@@ -790,13 +859,48 @@ h1 {
   background: var(--signal);
 }
 
+.hire-card {
+  grid-area: hire;
+  width: min(440px, 100%);
+  margin: 0 8% 0 0;
+  padding: 26px;
+  --base-transform: rotate(0.85deg);
+  transform: var(--base-transform);
+  background:
+    linear-gradient(200deg, rgba(255, 107, 53, 0.15), rgba(142, 125, 255, 0.08)),
+    var(--panel);
+}
+
+.hire-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.hire-list li {
+  border-left: 2px solid var(--signal);
+  padding-left: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hire-list strong {
+  color: var(--ink);
+}
+
+.hire-flow {
+  font-size: 0.85rem;
+}
+
 .panic-button {
   grid-area: panic;
-  justify-self: end;
+  justify-self: center;
   align-self: end;
   position: static;
   width: fit-content;
-  margin-right: 10%;
+  margin: 0;
   background: var(--signal);
 }
 
@@ -826,8 +930,10 @@ body.chaos {
 body.chaos .artifact,
 body.chaos .case-files,
 body.chaos .case-study,
+body.chaos .hire-card,
 body.chaos .internship-log,
-body.chaos .signal-card {
+body.chaos .signal-card,
+body.chaos .skills-matrix {
   animation: float-glitch 700ms steps(2) infinite;
 }
 
@@ -911,10 +1017,12 @@ body.chaos .signal-card {
     grid-template-areas:
       "lore"
       "source"
+      "skills"
       "intern"
       "study"
       "cases"
       "signal"
+      "hire"
       "panic";
     gap: 18px;
     padding-top: 0;
@@ -923,12 +1031,18 @@ body.chaos .signal-card {
   .artifact-lore,
   .artifact-source,
   .case-study,
+  .hire-card,
   .internship-log,
-  .signal-card {
+  .signal-card,
+  .skills-matrix {
     margin: 22px 0 0;
     width: 100%;
     --base-transform: none;
     transform: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .case-files {
@@ -952,5 +1066,29 @@ body.chaos .signal-card {
     position: static;
     margin-top: 24px;
     justify-self: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body.chaos,
+  body.chaos .artifact,
+  body.chaos .case-files,
+  body.chaos .case-study,
+  body.chaos .hire-card,
+  body.chaos .internship-log,
+  body.chaos .signal-card,
+  body.chaos .skills-matrix {
+    animation: none;
+  }
+
+  .case-card:hover,
+  .internship-receipts a:hover,
+  .source-link:hover,
+  .case-card-actions a:hover {
+    transform: none;
   }
 }

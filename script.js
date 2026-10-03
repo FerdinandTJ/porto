@@ -25,25 +25,38 @@ const commands = {
   },
   internship: {
     target: "#internship",
-    message: "experience.logs mounted: Telkom internship plus practicum assistant timeline found.",
+    message: "experience.logs mounted: Telkom internship, TA timeline, org work, and DocuChain IP found.",
+  },
+  skills: {
+    target: "#skills",
+    message: "skills.matrix mounted: languages, frameworks, databases, tools, and core CS found.",
+  },
+  edu: {
+    target: "#skills",
+    message: "credentials: BSc Computer Science, Universitas Pertamina, Aug 2022 - Aug 2026.",
+  },
+  hire: {
+    target: "#hire",
+    message: "hire.me ready: dashboards, company profiles, full-stack web. WhatsApp or email to start.",
   },
   scan: {
     action: () => {
-      appendLog("scan", "identity: Universitas Pertamina student / software builder.");
-      appendLog("scan", "experience: Telkom Indonesia intern, Web Programming PA, OOP PA x2, Operating Systems PA.");
-      appendLog("scan", "proof: edusync-uper.vercel.app, dashboardtws.cloud, Peduli Yuk collab repo, GitHub source artifacts, cv.pdf.");
-      appendLog("scan", "stack: Java, Python, C/C++, PHP, React, TypeScript, Swift, MySQL, Supabase, Laravel/Blade.");
+      appendLog("scan", "identity: Universitas Pertamina CS graduate (2022-2026) / full-stack web developer.");
+      appendLog("scan", "experience: Telkom SE intern Sep 2025-Feb 2026, TA Mar 2024-Aug 2026, Head of Alumni Relations, CITE UP technical.");
+      appendLog("scan", "ip: DocuChain copyright No. 001467311, Sep 2026.");
+      appendLog("scan", "proof: edusync-uper.vercel.app, dashboardtws.cloud, Peduli Yuk collab repo, GitHub source artifacts, cv-id.pdf + cv-en.pdf.");
+      appendLog("scan", "stack: Python, Java, PHP, C, JavaScript, SQL, Dart, Swift, Laravel, React, Inertia.js, Flutter, MySQL.");
       document.querySelector("#telkom-case").scrollIntoView({ behavior: "smooth", block: "center" });
     },
     message: "scan complete.",
   },
   source: {
     target: "#source",
-    message: "repository.access granted: 30 public repos, LinkedIn dossier linked.",
+    message: "repository.access granted: 30 public repos, LinkedIn dossier linked, DocuChain IP No. 001467311.",
   },
   cv: {
     target: "#source",
-    message: "cv dossier available: cv.pdf",
+    message: "cv dossier available: cv-id.pdf + cv-en.pdf",
   },
   linkedin: {
     target: "#source",
@@ -57,9 +70,11 @@ const commands = {
     action: () => toggleChaos("chaos mode toggled from terminal."),
   },
   help: {
-    message: "commands: scan, lore, internship, experiments, source, cv, linkedin, signal, chaos. secret: double click the forbidden button.",
+    message: "commands: scan, lore, skills, edu, internship, experiments, source, cv, linkedin, signal, hire, chaos. secret: double click the forbidden button.",
   },
 };
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function resizeCanvas() {
   width = canvas.width = window.innerWidth * window.devicePixelRatio;
@@ -67,7 +82,10 @@ function resizeCanvas() {
   canvas.style.width = `${window.innerWidth}px`;
   canvas.style.height = `${window.innerHeight}px`;
 
-  const count = Math.max(28, Math.floor(window.innerWidth / 28));
+  const smallScreen = window.innerWidth < 720;
+  const divisor = smallScreen ? 52 : 28;
+  const floor = smallScreen ? 14 : 28;
+  const count = Math.max(floor, Math.floor(window.innerWidth / divisor));
   nodes = Array.from({ length: count }, () => ({
     x: Math.random() * width,
     y: Math.random() * height,
@@ -111,6 +129,7 @@ function drawField() {
     }
   });
 
+  if (prefersReducedMotion) return;
   requestAnimationFrame(drawField);
 }
 
@@ -180,7 +199,10 @@ function resetTilt(event) {
   event.currentTarget.style.transform = "var(--base-transform)";
 }
 
-window.addEventListener("resize", resizeCanvas);
+window.addEventListener("resize", () => {
+  resizeCanvas();
+  if (prefersReducedMotion) drawField();
+});
 window.addEventListener("pointermove", moveCursor);
 
 document.querySelectorAll("a, button, input").forEach((item) => {
