@@ -21,7 +21,7 @@ const commands = {
   },
   experiments: {
     target: "#experiments",
-    message: "case.files unlocked: seven evidence packets found, including EduSync and Peduli Yuk.",
+    message: "case.files unlocked: eight evidence packets found, including Ruethies Patisserie, EduSync, and Peduli Yuk.",
   },
   internship: {
     target: "#internship",
@@ -44,7 +44,7 @@ const commands = {
       appendLog("scan", "identity: Universitas Pertamina CS graduate (2022-2026) / full-stack web developer.");
       appendLog("scan", "experience: Telkom SE intern Sep 2025-Feb 2026, TA Mar 2024-Aug 2026, Head of Alumni Relations, CITE UP technical.");
       appendLog("scan", "ip: DocuChain copyright No. 001467311, Sep 2026.");
-      appendLog("scan", "proof: edusync-uper.vercel.app, dashboardtws.cloud, Peduli Yuk collab repo, GitHub source artifacts, cv-id.pdf + cv-en.pdf.");
+      appendLog("scan", "proof: ruethiespatisserie.com, edusync-uper.vercel.app, dashboardtws.cloud, Peduli Yuk collab repo, GitHub source artifacts, cv-id.pdf + cv-en.pdf.");
       appendLog("scan", "stack: Python, Java, PHP, C, JavaScript, SQL, Dart, Swift, Laravel, React, Inertia.js, Flutter, MySQL.");
       document.querySelector("#telkom-case").scrollIntoView({ behavior: "smooth", block: "center" });
     },
